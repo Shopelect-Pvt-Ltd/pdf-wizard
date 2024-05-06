@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <title>Invoice</title>
+    <style type="text/css">
+
+        @font-face {
+            font-family: "Roboto", sans-serif;
+            src: url("./fonts/Roboto-Regular.ttf") format("truetype");
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        @font-face {
+        font-family: "Roboto", sans-serif;
+        src: url("./fonts/Roboto-Medium.ttf") format("truetype");
+        font-weight: 400;
+        font-style: normal;
+        }
+
+ 
+
+
+        body {
+        width: 100%;
+        /* border:1px solid black; */
+        height:100%;
+        box-sizing: border-box;
+        padding: 6px;
+        font-family: "Roboto", sans-serif;
+
+    /* Styles for print */
+  
+        
+        }
+        
+        
+        table {
+        border-collapse: collapse;
+        width: 100%;
+        border: 1px solid #c7c1c1; /* Outer border */
+        overflow-x: auto;
+        margin-bottom: 20px;
+        
+        }
+        .table-cell {
+        border: 1px solid #c7c1c1; /* You can adjust the color and border width as needed */
+         }
+         
+        .content{
+            width:100px;
+            overflow-x: auto; 
+
+        }
+        .company_header{
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 10px;
+            font-size: 30px;
+            font-weight: 500;
+            margin: 0 0 0;
+        }
+        .company_header table{
+            margin-bottom: 0 !important;
+        }
+        .company_header table,td,th{
+            border: none;
+            
+        }
+        .company_header td, .company_header th {
+        border: none;
+        padding: 0; /* Remove cell padding */
+        vertical-align: bottom; /* Align content to the bottom of cells */
+        }  
+        
+        .e-Invoice {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 10px;
+        }
+
+        .e-invoice-header {
+        font-size: medium;
+        }
+
+        .tableCell {
+            font-size: 14px;
+            padding: 8px;
+            margin-bottom: 2px;
+            max-width: 100px; /* Adjust the max-width as needed */
+            overflow: hidden;
+            white-space: normal !important; /* Allow text to wrap to the next line */
+            height: auto; /* Allow the height to adjust based on content */
+            word-break: break-all;
+        }
+
+        .boldText {
+        font-weight: 500;
+        font-size: 13px;
+        font-family: "Roboto", sans-serif;
+
+        }
+
+        .boldText2 {
+        font-weight: 500;
+        font-size: 15px;
+        font-family: "Roboto", sans-serif;
+
+        }
+
+        .headerCell {
+        
+        font-weight: 500;
+        font-family: "Roboto", sans-serif;
+
+        padding: 8px;
+        border-bottom: 1px solid #c7c1c1;
+        }
+        .boldText {
+            font-weight: 500;
+            font-family: "Roboto", sans-serif;
+
+        }
+
+
+        .Goods-details td {
+            
+            padding: 4px;
+            text-align: left;
+            font-style: normal;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 12px;
+            max-width: 100px; /* Adjust the max-width as needed */
+            overflow: hidden;
+            white-space: normal; /* Allow text to wrap to the next line */
+            height: auto; /* Allow the height to adjust based on content */
+            word-wrap: break-word; 
+        }
+
+        th {
+            border: 1px solid #c7c1c1;
+            padding: 2px;
+            text-align: center;
+            font-style: normal;
+            font-weight: 600;
+            font-family: "Roboto", sans-serif;
+
+            padding-bottom: 2px;
+            font-size: 14px;
+        }
+        .tb4{
+            font-size: 12px;
+        }  
+        .QR{
+            position: absolute;
+            top: 0px;
+            right: 0;
+        }
+    
+        .bar_code{
+            
+            top: 1200px;
+            left: 45%;
+        }
+        
+        .Transaction-details th {
+            border: 1px solid lightgrey;
+            font-weight: 500;
+            font-family: "Roboto", sans-serif;
+
+            padding: 8px;
+            text-align: left;
+        }
+
+        .Transaction-details td {
+            padding: 8px;
+            font-size: 14px;
+            border-bottom: 1px solid #c7c1c1;
+        }
+
+        .boldText {
+            font-weight: 500;
+            font-family: "Roboto", sans-serif;
+
+        }
+
+        .marginBottom {
+            margin-bottom: 2px;
+        }
+
+        .textAlignLeft {
+            text-align: left;
+        }
+        
+        
+        .Party-details {
+            width: 100%;
+            height: auto;
+            border-collapse: collapse;
+            margin-bottom: 10px;
+        }
+
+        /* Header cell styling */
+        .Party-details th {
+            width: 100%;
+            text-align: left;
+            padding: 8px;
+        }
+
+        /* Cell styling */
+        .Party-details td {
+            width: 50%;
+            padding: 2px;
+            padding-left: 5px;
+        }
+
+        /* Strong text styling */
+        .Party-details strong {
+            font-weight: 500;
+            font-family: "Roboto", sans-serif;
+
+        }
+
+        /* Font size for details */
+        .Party-details td,
+        .Party-details strong {
+            font-size: 12px;
+        }
+        
+        /* General table styling */
+        .Goods-details {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 10px;
+        }
+
+        /* Header cell styling */
+        .Goods-details th {
+            width: 100%;
+            text-align: center;
+            padding: 8px;
+        }
+
+        /* Cell styling */
+        .Goods-details td {
+            padding: 4px;
+        }
+
+        /* Body cell font size */
+        .Goods-details tbody td {
+            font-size: 12px;
+            text-align: right;
+        }
+
+        /* Additional styling for header cells */
+        .tb4 {
+            font-weight: 500;
+            font-family: "Roboto", sans-serif;
+
+            
+        }
+
+        /* Add border to all cells */
+        .Goods-details th,
+        .Goods-details td {
+            border: 1px solid lightgrey;
+        }
+
+        /* Table styling */
+        .table2 {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 10px;
+        }
+
+        /* Header cell styling */
+        .table2 th {
+            border: 1px solid lightgrey;
+            
+            text-align: center;
+            padding: 8px;
+            font-weight: 500;
+            font-family: "Roboto", sans-serif;
+
+            font-size: 12px;
+        }
+
+        /* Body cell styling */
+        .table2 td {
+            border: 1px solid lightgrey;
+            text-align: center;
+            padding: 8px;
+            font-size: 14px;
+        }
+
+        /* Additional styling for specific cells */
+        .table2 #taxable_amt,
+        .table2 #cgst_amt,
+        .table2 #sgst_amt,
+        .table2 #igst_amt,
+        .table2 #cess_amt,
+        .table2 #state_cess_amt,
+        .table2 #total_amt {
+            text-align: right;
+        }
+  
+         
+        .bottom-details{
+            position: relative;
+            bottom:0;
+            left: 0;
+            font-size: 12px;
+            text-align: center;
+            
+        }
+        .esign-details{
+            position: relative;
+            bottom: 0;
+            right: 0px;
+            font-size: 12px;
+            
+        }
+        
+        * {
+            margin: 0px;
+            padding: 0;
+            text-indent: 0;
+        }
+
+        p {
+            color: black;
+            font-style: normal;
+            font-weight: 500;
+            font-family: "Roboto", sans-serif;
+
+            text-decoration: none;
+            font-size: 17.5pt;
+            margin: 0pt;
+        }
+
+        h1 {
+            color: black;
+            font-style: normal;
+            font-weight: 500;
+            font-family: "Roboto", sans-serif;
+            text-decoration: none;
+            font-size: 10pt;
+        }
+
+        .s1 {
+            color: black;
+            font-style: normal;
+            font-weight: 500;
+            font-family: "Roboto", sans-serif;
+            text-decoration: none;
+            font-size: 7pt;
+        }
+
+        .s2 {
+            color: black;
+            font-family: "Trebuchet MS", sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            text-decoration: none;
+            font-size: 7pt;
+        }
+
+        h2 {
+            color: black;
+            font-family: "Trebuchet MS", sans-serif;
+            font-style: normal;
+            font-weight: 500;
+            font-family: "Roboto", sans-serif;
+            text-decoration: none;
+            font-size: 6.5pt;
+        }
+
+        .s3 {
+            color: black;
+            font-family: "Trebuchet MS", sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            text-decoration: none;
+            font-size: 6.5pt;
+        }
+
+        li {
+            display: block;
+        }
+
+        #l1 {
+            padding-left: 0pt;
+            counter-reset: c1 2;
+        }
+
+        #l1>li>*:first-child:before {
+            counter-increment: c1;
+            content: counter(c1, decimal)". ";
+            color: black;
+            font-family: "Trebuchet MS", sans-serif;
+            font-style: normal;
+            font-weight: 500;
+            font-family: "Roboto", sans-serif;
+            text-decoration: none;
+            font-size: 6pt;
+        }
+
+        #l1>li:first-child>*:first-child:before {
+            counter-increment: c1 0;
+        }
+
+        .partydetail{
+            border: 1px solid #c7c1c1;
+            margin-bottom: 0px;
+            margin-top: 0px;
+            
+        }
+
+        
+         
+    </style>
+</head>
+
+<body>
+<div class="Content">   
+    <div class="company_header">
+        <table style="width: 100%;">
+            <tr style="display: flex;width: 100%; align-items: flex-start;">
+            <td id="header_gstin" style="width: 50%;font-size: 29px;display: flex;flex-wrap: wrap; padding: 5px;padding-top: 60px;padding-bottom: 30px;"><span>{{header_gstin}} {{header_gstin_name}}</span> </td>
+               
+   
+            <td style="width: 50%;display: flex;justify-content: flex-end;">
+                <a class="qr-code" id="qr_code" href="www.qr-code-generator.com/solutions/text-qr-code/" style="cursor:default ; margin-top: -5px;"  rel="nofollow"><img width="166" height="170"
+                    src={{header_qr_code}} id="qr_code_image" style="object-fit: cover;"/></a>
+            </td>
+                    
+        </tr>
+        </table>   
+    </div>
+           
+    <table class="e-Invoice" style="margin-top: -5px;">
+        <tr>
+          <td class="tableCell headerCell boldText" style="font-size: 16px;" colspan="3">1.e-Invoice Details</td>
+        </tr>
+        <tr class="e-invoice-header">
+          <td  class="tableCell " style="width: 33.33%; text-align:left"><span class="boldText">IRN :</span> <span id="irn">{{irn_no}}</span></td>
+          <td class="tableCell" style="width: 33.33%;"><span class="boldText">Ack. No : </span><span id="ackno">{{ack_no}}</span></td>
+          <td  class="tableCell" style="width: 33.33%;"><span class="boldText">Ack. Date :</span> <span id="ackdt">{{ack_date}}</span></td>
+        </tr>
+      </table>     
+      <table class="Transaction-details" style="width: 100%;  margin-top: 20px;">
+        <tr>
+          <th colspan="3" class="boldText" style="font-size: 16px;">2.Transaction Details</th>
+        </tr>
+        <tr>
+          <td id="category" class="marginBottom textAlignLeft">
+            <span class="boldText">Supply Type Code:</span> {{sup_type_code}}
+          </td>
+          <td class="marginBottom textAlignLeft">
+            <span class="boldText">Document No:</span> <span id="docno">{{doc_no}}</span>
+          </td>
+          <td style="width: 33.33%; font-weight: 500; font-size: 14px; padding-left: 0px;" class="textAlignLeft">
+            <span class="boldText">IGST applicable despite Supplier and Recipient located in the same State:NO</span>
+          </td>
+        </tr>
+        <tr>
+          <td id="place_of_supply" class="marginBottom textAlignLeft">
+            <span class="boldText">Place of Supply:</span> <span id="place_of_supply">{{pos}}</span>
+          </td>
+          <td style="width: 33.33%;" class="textAlignLeft"></td>
+          <td style="width: 33.33%;" class="textAlignLeft"></td>
+        </tr>
+        <tr>
+          <td id="doctype" class="marginBottom textAlignLeft">
+            <span class="boldText">Document Type:</span> {{doc_type}}
+          </td>
+          <td id="docdt" class="marginBottom textAlignLeft">
+            <span class="boldText">Document Date:</span> <span id="docdt">{{doc_date}}</span>
+          </td>
+          <td id="ecom_gstin" class="marginBottom textAlignLeft" style="font-size:small;">
+            <span class="boldText">e-Com GSTIN:</span><span id="ecom_gstin">{{ecom_gstin}}</span>
+          </td>
+        </tr>
+      </table>
+      
+              <div class="partydetail">
+                <div style="font-size: 15px;font-weight: 500;padding: 8px;border-bottom: 1px solid  #c7c1c1 ;font-size: 16px;">3.Party Details</div>
+                    <div style="display: flex;align-items:flex-start;">
+                    <div class="LeftDetails" style="border-right: 1px solid #c7c1c1 ;width: 50%;padding: 8px;">
+                        <p style="height: 22px;font-weight: 500;font-size: 13px;font-size: 15px;margin-bottom: 4px;">Supplier</p>
+                        <p style="font-size: 13px;font-weight: 400;">{{supplier_gstin}}</p>
+                        <p style="font-size: 13px;font-weight: 400;">{{supplier_legal_name}}</p>
+                        <p style="font-size: 13px;font-weight: 400;">{{supplier_trade_name}}</p>
+                        <p style="font-size: 13px;font-weight: 400;">{{supplier_address1}}</p>
+                        <p style="font-size: 13px;font-weight: 400;">{{supplier_address2}}</p>
+                        <p style="font-size: 13px;font-weight: 400;">{{supplier_location}}</p>
+                        <p style="font-size: 13px;font-weight: 400;">{{supplier_pin}}</p>
+                        <p style="font-size: 13px;font-weight: 400;">{{supplier_state_code}}</p>
+
+                    </div>
+                    <div class="rightDetails" style="border-right: 1px solid #c7c1c1 ;width: 50%;padding: 8px;">
+                        <p style="height: 22px;font-weight: 500;font-size: 13px;font-size: 15px;margin-bottom: 4px;">Recipient</p>
+                        <p style="font-size: 13px;font-weight: 400;">{{recipient_gstin}}</p>
+                        <p style="font-size: 13px;font-weight: 400;">{{recipient_legal_name}}</p>
+                        <p style="font-size: 13px;font-weight: 400;">{{recipient_trade_name}}</p>
+                        <p style="font-size: 13px;font-weight: 400;">{{recipient_pos}}</p>
+                        <p style="font-size: 13px;font-weight: 400;">{{recipient_address1}}</p>
+                        <p style="font-size: 13px;font-weight: 400;">{{recipient_address2}}</p>
+                        <p style="font-size: 13px;font-weight: 400;">{{recipient_location}}</p>
+                        <p style="font-size: 13px;font-weight: 400;">{{recipient_pin}}{{recipient_state_code}}</p>
+
+                    </div>
+                </div>
+
+                <div style="display: flex;align-items:flex-start;">
+                    <div class="LeftDetails" style="border-right: 1px solid #c7c1c1 ;width: 50%;padding: 8px;padding-top: 0px;">
+                        <p style="height: 22px;font-weight: 500;font-size: 13px;font-size: 15px;">Despatch From</p>
+                        <p style="font-size: 13px;font-weight: 400;">{{despatch_legal_name}}</p>
+                        <p style="font-size: 13px;font-weight: 400;">{{despatch_address1}}</p>
+                        <p style="font-size: 13px;font-weight: 400;">{{despatch_address2}}</p>
+                        <p style="font-size: 13px;font-weight: 400;">{{despatch_location}}</p>
+                        <p style="font-size: 13px;font-weight: 400;">{{despatch_pin}}</p>
+                        <p style="font-size: 13px;font-weight: 400;">{{despatch_state_code}}</p>
+                  
+
+                    </div>
+                    <div class="rightDetails" style="border-right: 1px solid #c7c1c1 ;width: 50%;padding: 8px;padding-top: 0px;">
+                        <p style="height: 22px;font-weight: 500;font-size: 13px;font-size: 15px;">Ship To</p>
+                        <p style="font-size: 13px;font-weight: 400;">{{shipto_gstin}}</p>
+                        <p style="font-size: 13px;font-weight: 400;">{{shipto_legal_name}}</p>
+                        <p style="font-size: 13px;font-weight: 400;">{{shipto_trade_name}}</p>
+                        <p style="font-size: 13px;font-weight: 400;">{{shipto_address_1}}</p>
+                        <p style="font-size: 13px;font-weight: 400;">{{shipto_location}}</p>
+                     
+
+                    </div>
+                </div>
+                
+              </div>
+
+              <div style="font-size: 15px;font-weight: 500;padding: 8px; margin-top: 30px;border: 1px solid #c7c1c1;font-size: 15px;  margin-top: 20px;">4.Details of Good/Services</div>
+                
+        <div style="font-size: 15px;font-weight: 500;padding: 8px;border: 1px solid black;font-size: 15px; height: auto; padding-bottom: 0px;">   
+                <table id="table_div" class="Goods-details" style="width: 100%; margin-top: -5px;">    
+                    <tr>
+                        <th class="tb4" style="width: 7%;font-size: 13px;">Sr No.</th>
+                        <th class="tb4" style="width: 13%;font-size: 13px;">Item Description</th>
+                        <th class="tb4" style="width: 9%;font-size: 13px;">HSN Code</th>
+                        <th class="tb4" style="width: 8%;font-size: 13px;">Quantity</th>
+                        <th class="tb4" style="width: 8%;font-size: 13px;">Unit</th>
+                        <th class="tb4" style="width: 9%;font-size: 13px;">Unit Price(Rs)</th>
+                        <th class="tb4" style="width: 9%;font-size: 13px;">Discount (Rs)</th>
+                        <th class="tb4" style="width: 9%;font-size: 13px;">Taxable Amount (Rs)</th>
+                        <th class="tb4" style="width: 10%;font-size: 13px;">Tax Rate (GST+Cess | State Cess+Cess Non.Advol)</th>
+                        <th class="tb4" style="width: 8%;font-size: 13px;">Other Charges (Rs)</th>
+                        <th class="tb4" style="width: 9%;font-size: 13px;">Total</th>
+                    </tr>
+                
+                    <tbody id="tableBody">
+                        {{#itemlist}}
+                        <tr>
+                            <td style="width: 7%;font-size:12px;">{{sr_no}}</td>
+                            <td style="width: 13%;font-size:12px;">{{description}}</td>
+                            <td style="width: 9%;font-size:12px;">{{hsn_code}}</td>
+                            <td style="width: 8%;font-size:12px;">{{qty}}</td>
+                            <td style="width: 8%;font-size:12px;">{{unit_type}}</td>
+                            <td style="width: 9%;font-size:12px;">{{unit_price}}</td>
+                            <td style="width: 9%;font-size:12px;">{{discount}}</td>
+                            <td style="width: 9%;font-size:12px;">{{tax_amount}}</td>
+                            <td style="width: 10%;font-size:12px;">{{tax_rate_sum}}</td>
+                            <td style="width: 8%;font-size:12px;">{{other_charge}}</td>
+                            <td style="width: 9%;font-size:12px;">{{total}}</td>
+                        </tr>
+                        {{/itemlist}}
+                    
+                    </tbody>
+                </table>
+                
+            
+            <table class="table2"; style="width: 100%; margin-bottom: 3px; margin-top: 10px;">   
+            <tr>
+                <th style="width: 10%;font-size: 13px;line-height: 15px;">Taxable Amt</th>
+                <th style="width: 10%;font-size: 13px;line-height: 15px;">CGST Amt</th>
+                <th style="width: 10%;font-size: 13px;line-height: 15px;">SGST Amt </th>
+                <th style="width: 10%;font-size: 13px;line-height: 15px;">IGST Amt</th>
+                <th style="width: 10%;font-size: 13px;line-height: 15px;">CESS Amt</th>
+                <th style="width: 10%;font-size: 13px;line-height: 15px;">State CESS Amt</th>
+                <th style="width: 9%;font-size: 13px;line-height: 15px;">Discount</th>
+                <th style="width: 9%;font-size: 13px;line-height: 15px;">Other Changes</th>
+                <th style="width: 12%;font-size: 13px;line-height: 15px;">Round off Amt </th>
+                <th style="width: 10%;font-size: 13px;line-height: 15px;">Total Inv. Amt</th>
+
+            </tr>
+                
+            <tbody id="tableBody" style="text-align: center;">
+                <td id="taxable_amt" class="table-cell"style="width: 10%;font-size:12px;">{{summary_tax_amt}}</td>
+                <td id="cgst_amt" class="table-cell"style="width: 10%;font-size:12px;">{{summary_cgst_amt}}</td>
+                <td id="sgst_amt" class="table-cell"style="width: 10%;font-size:12px;">{{summary_sgst_amt}}</td>
+                <td id="total_amt" class="table-cell"style="width: 10%;font-size:12px;">{{summary_igst_amt}}</td>
+
+                <td id="igst_amt" class="table-cell"style="width: 10%;font-size:12px;">{{summary_cess_amt}}</td>
+                <td id="cess_amt" class="table-cell"style="width: 10%;font-size:12px;">{{summary_stcess_amt}}</td>
+                <td id="state_cess_amt" class="table-cell"style="width: 9%;font-size:12px;">{{summary_discount_amt}}</td>
+                <td class="table-cell"style="width: 19%;font-size:12px;">{{summary_other_charge_amt}}</td>
+                <td class="table-cell"style="width: 12%;font-size:12px;">{{summary_roundoff_amt}}</td>
+                <td class="table-cell"style="width: 10%;font-size:12px;">{{summary_total_inv_amt}}</td>
+            </tbody>
+            
+            </table> 
+        </div>
+        
+        <table class="bottom-details" style="width: 100%;padding-top: 0px;text-align: center;margin-top: 30px; margin-bottom: 0px; padding-top: 0px;">
+            <tr style="width: 100%;display: flex;justify-content: space-between;align-items: center;">
+                <td id="generated_by" style="width: 33%; text-align: left; padding-left: 6px;"><span class="boldText">Generated By:</span><span id="generated_by_gstin" style="font-size: 14px;"> {{generated_by}} </span><br/> 
+                    <span class="boldText">Print Date:</span><span id="generated_by_gstin" style="font-size: 14px;"> {{print_date}} </span></span></td>
+                
+                <td id="bar_code" style="width: 37%;display: flex;flex-direction: column;align-items: center;margin-right: 30px;">
+                    <img src={{bottom_barcode}} width="166px" height="36" style="object-fit: cover;"/>
+                    <small style="margin-top: 1px;font-size: 8px;">{{ack_no}}</small>
+                </td>
+                <td id="signed_dt" style="width:30%;display: flex;flex-direction: column;justify-content: flex-end;align-items: center;padding-right: 6px;padding-bottom: 4px;align-items: flex-end;"><img style="width: 88px; object-fit: contain; padding-right: 20px; padding-top: 4px;"
+                    src="data:image/jpg;base64,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" /><span><span>Digitally Singed By NIC-IRP</span> <br/> <span id="bottom_gen_date">on: {{digital_sign_on}}</span> </span></td>
+            </tr>
+        </table>
+</body>
+
+</html>

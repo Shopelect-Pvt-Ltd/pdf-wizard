@@ -1,0 +1,165 @@
+{
+  "_id": "66240579cb8e1fd1acb71d50",
+  "AckNo": 112317931323996,
+  "AckDt": "2023-10-25 13:33:00",
+  "Irn": "441be7a8a8d2666f2e1690ffcba57d136a58dcfa5f5b5a8fc9d93afdf7377ee7",
+  "SignedInvoice": "eyJhbGciOiJSUzI1NiIsImtpZCI6IkI4RDYzRUNCNThFQTVFNkY0QUFDM0Q1MjQ1NDNCMjI0NjY2OUIwRjgiLCJ4NXQiOiJ1TlkteTFqcVhtOUtyRDFTUlVPeUpHWnBzUGciLCJ0eXAiOiJKV1QifQ.eyJkYXRhIjoie1wiQWNrTm9cIjoxMTIzMTc5MzEzMjM5OTYsXCJBY2tEdFwiOlwiMjAyMy0xMC0yNSAxMzozMzowMFwiLFwiSXJuXCI6XCI0NDFiZTdhOGE4ZDI2NjZmMmUxNjkwZmZjYmE1N2QxMzZhNThkY2ZhNWY1YjVhOGZjOWQ5M2FmZGY3Mzc3ZWU3XCIsXCJWZXJzaW9uXCI6XCIxLjFcIixcIlRyYW5EdGxzXCI6e1wiVGF4U2NoXCI6XCJHU1RcIixcIlN1cFR5cFwiOlwiQjJCXCIsXCJSZWdSZXZcIjpcIk5cIixcIklnc3RPbkludHJhXCI6XCJOXCJ9LFwiRG9jRHRsc1wiOntcIlR5cFwiOlwiQ1JOXCIsXCJOb1wiOlwiU1ItQzAwMDkwMjMxXCIsXCJEdFwiOlwiMDEvMDEvMjAyM1wifSxcIlNlbGxlckR0bHNcIjp7XCJHc3RpblwiOlwiMzZBQURDQzE5NTFBMVo4XCIsXCJMZ2xObVwiOlwiQ3RybFMgRGF0YWNlbnRlcnMgTGltaXRlZFwiLFwiQWRkcjFcIjpcIlBsb3QuTm86MTYsQVBJSUMsU29mdHdhcmUgVW5pdHMgTGF5b3V0LE1hZGhhcHVyLFwiLFwiTG9jXCI6XCJUZWxhbmdhbmFcIixcIlBpblwiOjUwMDA4MSxcIlN0Y2RcIjpcIjM2XCJ9LFwiQnV5ZXJEdGxzXCI6e1wiR3N0aW5cIjpcIjM2QUFBQ1YyODA4QzFaUVwiLFwiTGdsTm1cIjpcIlRBVEEgQ09NTVVOSUNBVElPTlMgTElNSVRFRCAtIEhZRCBcIixcIlBvc1wiOlwiMzZcIixcIkFkZHIxXCI6XCJQbG90IE5vOiBDZmMvMSwgU29mdHdhcmUgVW5pdCBMYXlvdXQsIE1hZGhhcHVyLCBOZWFyIEltYWdlIGhvc3BpdGFsXCIsXCJMb2NcIjpcIkh5ZGVyYWJhZFwiLFwiUGluXCI6NTAwMDMzLFwiUGhcIjpcIjkyMjMzMjQ3MjlcIixcIkVtXCI6XCJtbi5nYW52aXJAdGF0YWNvbW11bmljYXRpb25zLmNvbVwiLFwiU3RjZFwiOlwiMzZcIn0sXCJJdGVtTGlzdFwiOlt7XCJJdGVtTm9cIjowLFwiU2xOb1wiOlwiMVwiLFwiSXNTZXJ2Y1wiOlwiWVwiLFwiUHJkRGVzY1wiOlwiQ09MT0NBVElPTjpDb2xvY2F0aW9uIDogNDIgVSBSYWNrIFNwYWNlKDFxdHkpUG93ZXIgOiA2IEtWQSgxcXR5KU90aGVyczMgOiBEdWN0IFVzYWdlIGNoYXJnZXMoMnF0eSk7QWN0LiBkdDogMjgtRGVjLTIwMjBcIixcIkhzbkNkXCI6XCI5OTgzMTVcIixcIlF0eVwiOjEuMCxcIlVuaXRQcmljZVwiOjI2MjUwMC4wLFwiVG90QW10XCI6MjYyNTAwLjAsXCJEaXNjb3VudFwiOjAuMCxcIlByZVRheFZhbFwiOjAuMCxcIkFzc0FtdFwiOjI2MjUwMC4wLFwiR3N0UnRcIjoxOC4wLFwiSWdzdEFtdFwiOjAuMCxcIkNnc3RBbXRcIjoyMzYyNS4wLFwiU2dzdEFtdFwiOjIzNjI1LjAsXCJUb3RJdGVtVmFsXCI6MzA5NzUwLjAsXCJPcmdDbnRyeVwiOlwiSU5cIn1dLFwiVmFsRHRsc1wiOntcIkFzc1ZhbFwiOjI2MjUwMC4wLFwiQ2dzdFZhbFwiOjIzNjI1LjAsXCJTZ3N0VmFsXCI6MjM2MjUuMCxcIklnc3RWYWxcIjowLjAsXCJDZXNWYWxcIjowLjAsXCJTdENlc1ZhbFwiOjAuMCxcIlRvdEludlZhbFwiOjMwOTc1MC4wfSxcIlJlZkR0bHNcIjp7XCJEb2NQZXJkRHRsc1wiOntcIkludlN0RHRcIjpcIjI4LzEyLzIwMjJcIixcIkludkVuZER0XCI6XCIyNy8wMy8yMDIzXCJ9LFwiUHJlY0RvY0R0bHNcIjpbXSxcIkNvbnRyRHRsc1wiOltdfSxcIkFkZGxEb2NEdGxzXCI6W10sXCJFeHBEdGxzXCI6e1wiUmVmQ2xtXCI6XCJOXCIsXCJDbnRDb2RlXCI6XCJJTlwifSxcIkV3YkR0bHNcIjp7XCJEaXN0YW5jZVwiOjB9fSIsImlzcyI6Ik5JQyJ9.IcQz0J2noVLRTMOI8zpq6YgjHJdgo3IEFHn_APQuXr3g8xua5Kwt5SrBbGyHYr1i_izlVVkmlXgUfBNdPN80LnHJY_nxvMIWGdD8Eg8mcShdhxpQ_rPB2wyA3xjB2yjGi2O3VlMnPjoeLR09wq_3mmOinXvxl4xQsLtvrVOBHyYdBT7j1EzB0NgoorACZtSLQtz7ZWMa_mPzfN3vKXbzVDZLx9y0kBtxd63VDEsE82yOF_sKSOQDefEbn6nIDHHehu3Y3rG4CtOOZK3UjN80ROUb5nZEL_Qb1ddguDDCybjQav_GxmCrB5NA78ER7CdyfvzUAbsoLzZ-SoklEyG7gQ",
+  "SignedQRCode": "eyJhbGciOiJSUzI1NiIsImtpZCI6IkI4RDYzRUNCNThFQTVFNkY0QUFDM0Q1MjQ1NDNCMjI0NjY2OUIwRjgiLCJ4NXQiOiJ1TlkteTFqcVhtOUtyRDFTUlVPeUpHWnBzUGciLCJ0eXAiOiJKV1QifQ.eyJkYXRhIjoie1wiU2VsbGVyR3N0aW5cIjpcIjM2QUFEQ0MxOTUxQTFaOFwiLFwiQnV5ZXJHc3RpblwiOlwiMzZBQUFDVjI4MDhDMVpRXCIsXCJEb2NOb1wiOlwiU1ItQzAwMDkwMjMxXCIsXCJEb2NUeXBcIjpcIkNSTlwiLFwiRG9jRHRcIjpcIjAxLzAxLzIwMjNcIixcIlRvdEludlZhbFwiOjMwOTc1MC4wLFwiSXRlbUNudFwiOjEsXCJNYWluSHNuQ29kZVwiOlwiOTk4MzE1XCIsXCJJcm5cIjpcIjQ0MWJlN2E4YThkMjY2NmYyZTE2OTBmZmNiYTU3ZDEzNmE1OGRjZmE1ZjViNWE4ZmM5ZDkzYWZkZjczNzdlZTdcIixcIklybkR0XCI6XCIyMDIzLTEwLTI1IDEzOjMzOjAwXCJ9IiwiaXNzIjoiTklDIn0.epl3Lg8M92jSqysQ6Gnj91f7j4epZtWeufujPOf1kGJZDOVhwZMd9Z7b2aD_6Q1Iwl5EBwqX2gSn1MiynK7G4Jq0Py1Pwtz13ZRHj6h2iNoeQN-fxu14IpZ42LTidcdwDecdG2ZTcflII9L4cmxIWzLg6kbsO6oeZJm6Xk1YG_nmnlAt-FLzwzUoTkCbosY1CB_PpTY0woi6Da6Ovhu9Xf1bK1GbOM3q1FCifvL84vg7ER7EHPvvsc9mQhpavetVegrB3pogrY2ox29KD1MH9TZNk07u3tDIthxYDNMZsABeA9Fp3nH4SQda422U-0EuOHU5kYAsjK7dpq_hxIKhiw",
+  "Status": "ACT",
+  "SellerGstin": "36AADCC1951A1Z8",
+  "BuyerGstin": "36AAACV2808C1ZQ",
+  "DocNo": "SR-C00090231",
+  "DocTyp": "CRN",
+  "DocDt": "2023-01-01T00:00:00.000Z",
+  "TotInvVal": 309750,
+  "ItemCnt": 1,
+  "MainHsnCode": "998315",
+  "IrnDt": "2023-10-25 13:33:00",
+  "SignedQRCodeParsed": {
+    "SellerGstin": "36AADCC1951A1Z8",
+    "BuyerGstin": "36AAACV2808C1ZQ",
+    "DocNo": "SR-C00090231",
+    "DocTyp": "CRN",
+    "DocDt": "01/01/2023",
+    "TotInvVal": 309750,
+    "ItemCnt": 1,
+    "MainHsnCode": "998315",
+    "Irn": "441be7a8a8d2666f2e1690ffcba57d136a58dcfa5f5b5a8fc9d93afdf7377ee7",
+    "IrnDt": "2023-10-25 13:33:00"
+  },
+  "SignedInvoiceParsed": {
+    "AckNo": 112317931323996,
+    "AckDt": "2023-10-25 13:33:00",
+    "Irn": "441be7a8a8d2666f2e1690ffcba57d136a58dcfa5f5b5a8fc9d93afdf7377ee7",
+    "Version": "1.1",
+    "TranDtls": {
+      "TaxSch": "GST",
+      "SupTyp": "B2B",
+      "RegRev": "N",
+      "IgstOnIntra": "N"
+    },
+    "DocDtls": {
+      "Typ": "CRN",
+      "No": "SR-C00090231",
+      "Dt": "01/01/2023"
+    },
+    "SellerDtls": {
+      "Gstin": "36AADCC1951A1Z8",
+      "LglNm": "CtrlS Datacenters Limited",
+      "Addr1": "Plot.No:16,APIIC,Software Units Layout,Madhapur,",
+      "Loc": "Telangana",
+      "Pin": 500081,
+      "Stcd": "36"
+    },
+    "BuyerDtls": {
+      "Gstin": "36AAACV2808C1ZQ",
+      "LglNm": "TATA COMMUNICATIONS LIMITED - HYD ",
+      "Pos": "36",
+      "Addr1": "Plot No: Cfc/1, Software Unit Layout, Madhapur, Near Image hospital",
+      "Loc": "Hyderabad",
+      "Pin": 500033,
+      "Ph": "9223324729",
+      "Em": "mn.ganvir@tatacommunications.com",
+      "Stcd": "36"
+    },
+    "ItemList": [
+      {
+        "ItemNo": 0,
+        "SlNo": "1",
+        "IsServc": "Y",
+        "PrdDesc": "COLOCATION:Colocation : 42 U Rack Space(1qty)Power : 6 KVA(1qty)Others3 : Duct Usage charges(2qty);Act. dt: 28-Dec-2020",
+        "HsnCd": "998315",
+        "Qty": 1,
+        "UnitPrice": 262500,
+        "TotAmt": 262500,
+        "Discount": 0,
+        "PreTaxVal": 0,
+        "AssAmt": 262500,
+        "GstRt": 18,
+        "IgstAmt": 0,
+        "CgstAmt": 23625,
+        "SgstAmt": 23625,
+        "TotItemVal": 309750,
+        "OrgCntry": "IN",
+        "Irn": "441be7a8a8d2666f2e1690ffcba57d136a58dcfa5f5b5a8fc9d93afdf7377ee7",
+        "AckNo": 112317931323996,
+        "AckDt": "2023-10-25 13:33:00",
+        "Version": "1.1",
+        "TranDtls": {
+          "TaxSch": "GST",
+          "SupTyp": "B2B",
+          "RegRev": "N",
+          "IgstOnIntra": "N"
+        },
+        "DocDtls": {
+          "Typ": "CRN",
+          "No": "SR-C00090231",
+          "Dt": "01/01/2023"
+        },
+        "SellerDtls": {
+          "Gstin": "36AADCC1951A1Z8",
+          "LglNm": "CtrlS Datacenters Limited",
+          "Addr1": "Plot.No:16,APIIC,Software Units Layout,Madhapur,",
+          "Loc": "Telangana",
+          "Pin": 500081,
+          "Stcd": "36"
+        },
+        "BuyerDtls": {
+          "Gstin": "36AAACV2808C1ZQ",
+          "LglNm": "TATA COMMUNICATIONS LIMITED - HYD ",
+          "Pos": "36",
+          "Addr1": "Plot No: Cfc/1, Software Unit Layout, Madhapur, Near Image hospital",
+          "Loc": "Hyderabad",
+          "Pin": 500033,
+          "Ph": "9223324729",
+          "Em": "mn.ganvir@tatacommunications.com",
+          "Stcd": "36"
+        },
+        "ValDtls": {
+          "AssVal": 262500,
+          "CgstVal": 23625,
+          "SgstVal": 23625,
+          "IgstVal": 0,
+          "CesVal": 0,
+          "StCesVal": 0,
+          "TotInvVal": 309750
+        },
+        "SellerGstin": "36AADCC1951A1Z8",
+        "BuyerGstin": "36AAACV2808C1ZQ",
+        "DocNo": "SR-C00090231",
+        "DocTyp": "CRN",
+        "DocDt": "01/01/2023",
+        "TotInvVal": 309750,
+        "ItemCnt": 1,
+        "MainHsnCode": "998315",
+        "IrnDt": "2023-10-25 13:33:00"
+      }
+    ],
+    "ValDtls": {
+      "AssVal": 262500,
+      "CgstVal": 23625,
+      "SgstVal": 23625,
+      "IgstVal": 0,
+      "CesVal": 0,
+      "StCesVal": 0,
+      "TotInvVal": 309750
+    },
+    "RefDtls": {
+      "DocPerdDtls": {
+        "InvStDt": "28/12/2022",
+        "InvEndDt": "27/03/2023"
+      },
+      "PrecDocDtls": [],
+      "ContrDtls": []
+    },
+    "AddlDocDtls": [],
+    "ExpDtls": {
+      "RefClm": "N",
+      "CntCode": "IN"
+    },
+    "EwbDtls": {
+      "Distance": 0
+    }
+  },
+  "file_id": "29099671-1831-4343-897e-96b09fe965d4"
+}
