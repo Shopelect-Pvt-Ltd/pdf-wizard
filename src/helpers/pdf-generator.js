@@ -18,9 +18,8 @@ async function GeneratePDF(req, res) {
   try {
     // Set the HTML content you want to convert to PDF
     htmlContent = fs.readFileSync(
-      "src/templates/irn_invoice/irn_invoice.html",
-      // ../src/templates/irn_invoice/irn_invoice.html
-
+      // "src/templates/irn_invoice/irn_invoice.html",
+      "../src/templates/irn_invoice/irn_invoice.html",
       "utf8"
     );
   } catch (error) {
