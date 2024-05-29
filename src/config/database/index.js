@@ -5,14 +5,14 @@ const uri =
 const dbName = "gstservice";
 
 // Create a MongoDB client
-const client = new MongoClient(uri, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
 
 async function fetchDBCollection(conRequest) {
+  const client = new MongoClient(uri, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  });
+  await client.connect(); // Connect to MongoDB
   try {
-    await client.connect(); // Connect to MongoDB
     console.log("Connected to MongoDB", conRequest);
 
     const db = client.db(dbName); // Get the database instance
@@ -24,16 +24,21 @@ async function fetchDBCollection(conRequest) {
       .toArray();
 
     const jsonData = JSON.parse(JSON.stringify(documents));
+    console.log("json data found", jsonData);
     return jsonData;
   } catch (error) {
     console.error("Error fetching data from MongoDB:", error);
   } finally {
-    await client.close(); // Close the MongoDB connection
+    await client?.close(); // Close the MongoDB connection
     console.log("Disconnected from MongoDB");
   }
 }
 
 async function updateDBCollection(updateArgs) {
+  const client = new MongoClient(uri, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  });
   try {
     await client.connect(); // Connect to MongoDB
 

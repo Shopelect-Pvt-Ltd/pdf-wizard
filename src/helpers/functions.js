@@ -5,7 +5,7 @@ const QRGenerator = require("qrcode");
 
 const formattingFunctions = {
   DATE: formatDate,
-  POS_CODE: (value) => STATE_CODES[value] || "undefined",
+  POS_CODE: (value) => STATE_CODES[parseInt(value).toString()] || "undefined",
   INV_TYPE: (value) => INVOICE_TYPES[value] || "undefined",
   ARRAY_ITEMS: formatArrayItem,
   QR_CODE: generateQRCode,

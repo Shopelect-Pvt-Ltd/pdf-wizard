@@ -1,10 +1,14 @@
 const express = require("express");
 const GeneratePDF = require("./helpers/pdf-generator");
 const multer = require("multer");
+const { CheckInvoice } = require("./controller/invoice");
+const cors = require("cors");
 
 const app = express();
+app.use(cors());
 
-const port = 8000;
+const port = process.argv[2] || process.env.PORT || 8000;
+console.log("port is", port, process.argv);
 const logger = require("log4js").getLogger();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -15,13 +19,18 @@ app.post("/", upload.none(), async (req, res) => {
   res.send(200);
 });
 
-app.get("/generate/:irn", async (req, res) => {
-  logger.debug("Lets generate PDF together!");
+// app.get("/generate/:irn", async (req, res) => {
+//   logger.debug("Generating single pdf");
+//   GeneratePDF(req, res);
+// });
+
+app.post("/generate_single/:irn", async (req, res) => {
   GeneratePDF(req, res);
 });
-app.post("/generate/:irn", async (req, res) => {
-  logger.debug("Lets generate PDF together!");
-  GeneratePDF(req, res);
+
+//Endpoint for checking and validating invoice data
+app.get("/check_invoice/:irn_no", async (req, res) => {
+  CheckInvoice(req, res);
 });
 
 app.listen(port, () => {

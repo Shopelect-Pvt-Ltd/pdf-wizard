@@ -19,9 +19,10 @@ async function GeneratePDF(req, res) {
     // Set the HTML content you want to convert to PDF
     htmlContent = fs.readFileSync(
       "src/templates/irn_invoice/irn_invoice.html",
+      // ../src/templates/irn_invoice/irn_invoice.html
+
       "utf8"
     );
-    // console.log("htmlContent", htmlContent);
   } catch (error) {
     console.error("Error reading HTML file:", error);
   }
@@ -29,8 +30,8 @@ async function GeneratePDF(req, res) {
   var options = {
     headerTemplate: "<span></span>",
     displayHeaderFooter: false,
-    path: "generated-pdf.pdf",
     format: "A4",
+    path: `output/${req.params.irn}.pdf`,
 
     printBackground: true,
   };
@@ -39,7 +40,7 @@ async function GeneratePDF(req, res) {
     payload: { Irn: req.params.irn },
   });
   if (dataFromDatabase.length === 0) {
-    res.send({ status: false, message: "No Data Found" });
+    res.send({ status: false, message: "IRN number does not exist" });
     return;
   }
   let compiledJSON = await JSON_Compiler(
@@ -52,7 +53,6 @@ async function GeneratePDF(req, res) {
   //map json data to template
   const html = template(compiledJSON);
   // console.log("compiled json", compiledJSON);
-  console.log("compiled json", html);
 
   // Set the HTML content of the page
   await page.setContent(html, {
@@ -106,12 +106,14 @@ async function GeneratePDF(req, res) {
           res.send({
             status: true,
             message: "PDF uploaded to S3 successfully. URL:",
+            data: { url: url },
           });
         })
         .catch((error) => {
           console.error("Error uploading PDF to S3:", error);
         });
       //set the pdf and send it back as API response
+      // res.send({ status: true, message: "Invoice generated success" });
       // res
       //   .set({
       //     "Content-Type": "application/pdf",
