@@ -1,7 +1,11 @@
 const express = require("express");
 const GeneratePDF = require("./helpers/pdf-generator");
 const multer = require("multer");
-const { CheckInvoice } = require("./controller/invoice");
+const {
+  CheckInvoice,
+  getInvoiceData,
+  getInvoiceHTML,
+} = require("./controller/invoice");
 const cors = require("cors");
 
 const app = express();
@@ -31,6 +35,14 @@ app.post("/generate_single/:irn", async (req, res) => {
 //Endpoint for checking and validating invoice data
 app.get("/check_invoice/:irn_no", async (req, res) => {
   CheckInvoice(req, res);
+});
+
+app.get("/get_invoice_data/:irn_no", async (req, res) => {
+  getInvoiceData(req, res);
+});
+
+app.get("/get_invoice_html/:irn_no", async (req, res) => {
+  getInvoiceHTML(req, res);
 });
 
 app.listen(port, () => {

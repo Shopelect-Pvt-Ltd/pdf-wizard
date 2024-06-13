@@ -18,8 +18,8 @@ async function GeneratePDF(req, res) {
   try {
     // Set the HTML content you want to convert to PDF
     htmlContent = fs.readFileSync(
-      // "src/templates/irn_invoice/irn_invoice.html",
-      "../src/templates/irn_invoice/irn_invoice.html",
+      "src/templates/irn_invoice/irn_invoice.html",
+      // "../src/templates/irn_invoice/irn_invoice.html",
       "utf8"
     );
   } catch (error) {
@@ -39,7 +39,9 @@ async function GeneratePDF(req, res) {
     payload: { Irn: req.params.irn },
   });
   if (dataFromDatabase.length === 0) {
-    res.send({ status: false, message: "IRN number does not exist" });
+    res
+      .status(404)
+      .send({ status: false, message: "IRN number does not exist" });
     return;
   }
   let compiledJSON = await JSON_Compiler(
@@ -110,6 +112,10 @@ async function GeneratePDF(req, res) {
         })
         .catch((error) => {
           console.error("Error uploading PDF to S3:", error);
+          res.status(500).send({
+            status: false,
+            message: "Could not upload to S3",
+          });
         });
       //set the pdf and send it back as API response
       // res.send({ status: true, message: "Invoice generated success" });

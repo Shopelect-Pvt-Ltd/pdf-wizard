@@ -448,9 +448,9 @@
           <td class="tableCell headerCell boldText" style="font-size: 16px;" colspan="3">1.e-Invoice Details</td>
         </tr>
         <tr class="e-invoice-header">
-          <td  class="tableCell " style="width: 33.33%; text-align:left"><span class="boldText">IRN :</span> <span id="irn">{{irn_no}}</span></td>
-          <td class="tableCell" style="width: 33.33%;"><span class="boldText">Ack. No : </span><span id="ackno">{{ack_no}}</span></td>
-          <td  class="tableCell" style="width: 33.33%;"><span class="boldText">Ack. Date :</span> <span id="ackdt">{{ack_date}}</span></td>
+          <td  class="tableCell " style="width: 33.33%; text-align:left"><span class="boldText">IRN :</span> <span id="irn_no">{{irn_no}}</span></td>
+          <td class="tableCell" style="width: 33.33%;"><span class="boldText">Ack. No : </span><span id="ack_no">{{ack_no}}</span></td>
+          <td  class="tableCell" style="width: 33.33%;"><span class="boldText">Ack. Date :</span> <span id="ack_date">{{ack_date}}</span></td>
         </tr>
       </table>     
       <table class="Transaction-details" style="width: 100%;  margin-top: 20px;">
@@ -459,28 +459,28 @@
         </tr>
         <tr>
           <td id="category" class="marginBottom textAlignLeft">
-            <span class="boldText">Supply Type Code:</span> {{sup_type_code}}
+            <span class="boldText" id="sup_type_code">Supply Type Code:</span> {{sup_type_code}}
           </td>
           <td class="marginBottom textAlignLeft">
-            <span class="boldText">Document No:</span> <span id="docno">{{doc_no}}</span>
+            <span class="boldText">Document No:</span> <span id="doc_no">{{doc_no}}</span>
           </td>
           <td style="width: 33.33%; font-weight: 500; font-size: 14px; padding-left: 0px;" class="textAlignLeft">
             <span class="boldText">IGST applicable despite Supplier and Recipient located in the same State:NO</span>
           </td>
         </tr>
         <tr>
-          <td id="place_of_supply" class="marginBottom textAlignLeft">
-            <span class="boldText">Place of Supply:</span> <span id="place_of_supply">{{pos}}</span>
+          <td id="pos" class="marginBottom textAlignLeft">
+            <span class="boldText">Place of Supply:</span> <span >{{pos}}</span>
           </td>
           <td style="width: 33.33%;" class="textAlignLeft"></td>
           <td style="width: 33.33%;" class="textAlignLeft"></td>
         </tr>
         <tr>
           <td id="doctype" class="marginBottom textAlignLeft">
-            <span class="boldText">Document Type:</span> {{doc_type}}
+            <span class="boldText" id="doc_type">Document Type:</span> {{doc_type}}
           </td>
-          <td id="docdt" class="marginBottom textAlignLeft">
-            <span class="boldText">Document Date:</span> <span id="docdt">{{doc_date}}</span>
+          <td  class="marginBottom textAlignLeft" >
+            <span class="boldText" >Document Date:</span> <span id="doc_date">{{doc_date}}</span>
           </td>
           <td id="ecom_gstin" class="marginBottom textAlignLeft" style="font-size:small;">
             <span class="boldText">e-Com GSTIN:</span><span id="ecom_gstin">{{ecom_gstin}}</span>
@@ -493,26 +493,26 @@
                     <div style="display: flex;align-items:flex-start;">
                     <div class="LeftDetails" style="border-right: 1px solid #c7c1c1 ;width: 50%;padding: 8px;">
                         <p style="height: 22px;font-weight: 500;font-size: 13px;font-size: 15px;margin-bottom: 4px;">Supplier</p>
-                        <p style="font-size: 13px;font-weight: 400;">{{supplier_gstin}}</p>
-                        <p style="font-size: 13px;font-weight: 400;">{{supplier_legal_name}}</p>
-                        <p style="font-size: 13px;font-weight: 400;">{{supplier_trade_name}}</p>
-                        <p style="font-size: 13px;font-weight: 400;">{{supplier_address1}}</p>
-                        <p style="font-size: 13px;font-weight: 400;">{{supplier_address2}}</p>
-                        <p style="font-size: 13px;font-weight: 400;">{{supplier_location}}</p>
-                        <p style="font-size: 13px;font-weight: 400;">{{supplier_pin}}</p>
-                        <p style="font-size: 13px;font-weight: 400;">{{supplier_state_code}}</p>
+                        <p style="font-size: 13px;font-weight: 400;" id="supplier_gstin">{{supplier_gstin}}</p>
+                        <p style="font-size: 13px;font-weight: 400;" id="supplier_legal_name">{{supplier_legal_name}}</p>
+                        <p style="font-size: 13px;font-weight: 400;" id="supplier_trade_name">{{supplier_trade_name}}</p>
+                        <p style="font-size: 13px;font-weight: 400;" id="supplier_address1">{{supplier_address1}}</p>
+                        <p style="font-size: 13px;font-weight: 400;" id="supplier_address2">{{supplier_address2}}</p>
+                        <p style="font-size: 13px;font-weight: 400;" id="supplier_location">{{supplier_location}}</p>
+                        <p style="font-size: 13px;font-weight: 400;" id="supplier_pin">{{supplier_pin}}</p>
+                        <p style="font-size: 13px;font-weight: 400;" id="supplier_state_code">{{supplier_state_code}}</p>
 
                     </div>
                     <div class="rightDetails" style="border-right: 1px solid #c7c1c1 ;width: 50%;padding: 8px;">
                         <p style="height: 22px;font-weight: 500;font-size: 13px;font-size: 15px;margin-bottom: 4px;">Recipient</p>
-                        <p style="font-size: 13px;font-weight: 400;">{{recipient_gstin}}</p>
-                        <p style="font-size: 13px;font-weight: 400;">{{recipient_legal_name}}</p>
-                        <p style="font-size: 13px;font-weight: 400;">{{recipient_trade_name}}</p>
-                        <p style="font-size: 13px;font-weight: 400;">{{recipient_pos}}</p>
-                        <p style="font-size: 13px;font-weight: 400;">{{recipient_address1}}</p>
-                        <p style="font-size: 13px;font-weight: 400;">{{recipient_address2}}</p>
-                        <p style="font-size: 13px;font-weight: 400;">{{recipient_location}}</p>
-                        <p style="font-size: 13px;font-weight: 400;">{{recipient_pin}}{{recipient_state_code}}</p>
+                        <p style="font-size: 13px;font-weight: 400;" id="recipient_gstin">{{recipient_gstin}}</p>
+                        <p style="font-size: 13px;font-weight: 400;" id="recipient_legal_name">{{recipient_legal_name}}</p>
+                        <p style="font-size: 13px;font-weight: 400;" id="recipient_trade_name">{{recipient_trade_name}}</p>
+                        <p style="font-size: 13px;font-weight: 400;" id="recipient_pos">{{recipient_pos}}</p>
+                        <p style="font-size: 13px;font-weight: 400;" id="recipient_address1">{{recipient_address1}}</p>
+                        <p style="font-size: 13px;font-weight: 400;" id="recipient_address2">{{recipient_address2}}</p>
+                        <p style="font-size: 13px;font-weight: 400;" id="recipient_location">{{recipient_location}}</p>
+                        <p style="font-size: 13px;font-weight: 400; " id="recipient_state_code">{{recipient_pin}}{{recipient_state_code}}</p>
 
                     </div>
                 </div>
@@ -520,22 +520,22 @@
                 <div style="display: flex;align-items:flex-start;">
                     <div class="LeftDetails" style="border-right: 1px solid #c7c1c1 ;width: 50%;padding: 8px;padding-top: 0px;">
                         <p style="height: 22px;font-weight: 500;font-size: 13px;font-size: 15px;">Despatch From</p>
-                        <p style="font-size: 13px;font-weight: 400;">{{despatch_legal_name}}</p>
-                        <p style="font-size: 13px;font-weight: 400;">{{despatch_address1}}</p>
-                        <p style="font-size: 13px;font-weight: 400;">{{despatch_address2}}</p>
-                        <p style="font-size: 13px;font-weight: 400;">{{despatch_location}}</p>
-                        <p style="font-size: 13px;font-weight: 400;">{{despatch_pin}}</p>
-                        <p style="font-size: 13px;font-weight: 400;">{{despatch_state_code}}</p>
+                        <p style="font-size: 13px;font-weight: 400;" id="despatch_legal_name">{{despatch_legal_name}}</p>
+                        <p style="font-size: 13px;font-weight: 400;" id="despatch_address1">{{despatch_address1}}</p>
+                        <p style="font-size: 13px;font-weight: 400;" id="despatch_address2">{{despatch_address2}}</p>
+                        <p style="font-size: 13px;font-weight: 400;" id="despatch_location">{{despatch_location}}</p>
+                        <p style="font-size: 13px;font-weight: 400;" id="despatch_pin">{{despatch_pin}}</p>
+                        <p style="font-size: 13px;font-weight: 400;" id="despatch_state_code">{{despatch_state_code}}</p>
                   
 
                     </div>
                     <div class="rightDetails" style="border-right: 1px solid #c7c1c1 ;width: 50%;padding: 8px;padding-top: 0px;">
                         <p style="height: 22px;font-weight: 500;font-size: 13px;font-size: 15px;">Ship To</p>
-                        <p style="font-size: 13px;font-weight: 400;">{{shipto_gstin}}</p>
-                        <p style="font-size: 13px;font-weight: 400;">{{shipto_legal_name}}</p>
-                        <p style="font-size: 13px;font-weight: 400;">{{shipto_trade_name}}</p>
-                        <p style="font-size: 13px;font-weight: 400;">{{shipto_address_1}}</p>
-                        <p style="font-size: 13px;font-weight: 400;">{{shipto_location}}</p>
+                        <p style="font-size: 13px;font-weight: 400;" id="shipto_gstin">{{shipto_gstin}}</p>
+                        <p style="font-size: 13px;font-weight: 400;" id="shipto_legal_name">{{shipto_legal_name}}</p>
+                        <p style="font-size: 13px;font-weight: 400;" id="shipto_trade_name">{{shipto_trade_name}}</p>
+                        <p style="font-size: 13px;font-weight: 400;" id="shipto_address_1">{{shipto_address_1}}</p>
+                        <p style="font-size: 13px;font-weight: 400;" id="shipto_location">{{shipto_location}}</p>
                      
 
                     </div>
@@ -546,7 +546,7 @@
               <div style="font-size: 15px;font-weight: 500;padding: 8px; margin-top: 30px;border: 1px solid #c7c1c1;font-size: 15px;  margin-top: 20px;">4.Details of Good/Services</div>
                 
         <div style="font-size: 15px;font-weight: 500;padding: 8px;border: 1px solid black;font-size: 15px; height: auto; padding-bottom: 0px;">   
-                <table id="table_div" class="Goods-details" style="width: 100%; margin-top: -5px;">    
+                <table  class="Goods-details" style="width: 100%; margin-top: -5px;">    
                     <tr>
                         <th class="tb4" style="width: 7%;font-size: 13px;">Sr No.</th>
                         <th class="tb4" style="width: 13%;font-size: 13px;">Item Description</th>
@@ -561,20 +561,20 @@
                         <th class="tb4" style="width: 9%;font-size: 13px;">Total</th>
                     </tr>
                 
-                    <tbody id="tableBody">
+                    <tbody >
                         {{#itemlist}}
                         <tr>
-                            <td style="width: 7%;font-size:12px;">{{sr_no}}</td>
-                            <td style="width: 13%;font-size:12px;">{{description}}</td>
-                            <td style="width: 9%;font-size:12px;">{{hsn_code}}</td>
-                            <td style="width: 8%;font-size:12px;">{{qty}}</td>
-                            <td style="width: 8%;font-size:12px;">{{unit_type}}</td>
-                            <td style="width: 9%;font-size:12px;">{{unit_price}}</td>
-                            <td style="width: 9%;font-size:12px;">{{discount}}</td>
-                            <td style="width: 9%;font-size:12px;">{{tax_amount}}</td>
-                            <td style="width: 10%;font-size:12px;">{{tax_rate_sum}}</td>
-                            <td style="width: 8%;font-size:12px;">{{other_charge}}</td>
-                            <td style="width: 9%;font-size:12px;">{{total}}</td>
+                            <td style="width: 7%;font-size:12px;" id="{{@index}}~SlNo">{{sr_no}}</td>
+                            <td style="width: 13%;font-size:12px;" id="{{@index}}~PrdDesc">{{description}}</td>
+                            <td style="width: 9%;font-size:12px;" id="{{@index}}~HsnCd">{{hsn_code}}</td>
+                            <td style="width: 8%;font-size:12px;" id="{{@index}}~Qty">{{qty}}</td>
+                            <td style="width: 8%;font-size:12px;" id="{{@index}}~Unit">{{unit_type}}</td>
+                            <td style="width: 9%;font-size:12px;" id="{{@index}}~UnitPrice">{{unit_price}}</td>
+                            <td style="width: 9%;font-size:12px;" id="{{@index}}~Discount">{{discount}}</td>
+                            <td style="width: 9%;font-size:12px;" id="{{@index}}~AssAmt">{{tax_amount}}</td>
+                            <td style="width: 10%;font-size:12px;" id="{{@index}}~tax_rate_sum">{{tax_rate_sum}}</td>
+                            <td style="width: 8%;font-size:12px;" id="{{@index}}~OthChrg">{{other_charge}}</td>
+                            <td style="width: 9%;font-size:12px;" id="{{@index}}~TotItemVal">{{total}}</td>
                         </tr>
                         {{/itemlist}}
                     
@@ -597,18 +597,18 @@
 
             </tr>
                 
-            <tbody id="tableBody" style="text-align: center;">
-                <td id="taxable_amt" class="table-cell"style="width: 10%;font-size:12px;">{{summary_tax_amt}}</td>
-                <td id="cgst_amt" class="table-cell"style="width: 10%;font-size:12px;">{{summary_cgst_amt}}</td>
-                <td id="sgst_amt" class="table-cell"style="width: 10%;font-size:12px;">{{summary_sgst_amt}}</td>
-                <td id="total_amt" class="table-cell"style="width: 10%;font-size:12px;">{{summary_igst_amt}}</td>
+            <tbody  style="text-align: center;">
+                <td  class="table-cell"style="width: 10%;font-size:12px;" id="summary_tax_amt">{{summary_tax_amt}}</td>
+                <td  class="table-cell"style="width: 10%;font-size:12px;" id="summary_cgst_amt">{{summary_cgst_amt}}</td>
+                <td  class="table-cell"style="width: 10%;font-size:12px;" id="summary_sgst_amt">{{summary_sgst_amt}}</td>
+                <td  class="table-cell"style="width: 10%;font-size:12px;" id="summary_igst_amt">{{summary_igst_amt}}</td>
 
-                <td id="igst_amt" class="table-cell"style="width: 10%;font-size:12px;">{{summary_cess_amt}}</td>
-                <td id="cess_amt" class="table-cell"style="width: 10%;font-size:12px;">{{summary_stcess_amt}}</td>
-                <td id="state_cess_amt" class="table-cell"style="width: 9%;font-size:12px;">{{summary_discount_amt}}</td>
-                <td class="table-cell"style="width: 19%;font-size:12px;">{{summary_other_charge_amt}}</td>
-                <td class="table-cell"style="width: 12%;font-size:12px;">{{summary_roundoff_amt}}</td>
-                <td class="table-cell"style="width: 10%;font-size:12px;">{{summary_total_inv_amt}}</td>
+                <td  class="table-cell"style="width: 10%;font-size:12px;" id="summary_cess_amt">{{summary_cess_amt}}</td>
+                <td class="table-cell"style="width: 10%;font-size:12px;" id="summary_stcess_amt">{{summary_stcess_amt}}</td>
+                <td class="table-cell"style="width: 9%;font-size:12px;" id="summary_discount_amt">{{summary_discount_amt}}</td>
+                <td class="table-cell"style="width: 19%;font-size:12px;" id="summary_other_charge_amt">{{summary_other_charge_amt}}</td>
+                <td class="table-cell"style="width: 12%;font-size:12px;" id="summary_roundoff_amt">{{summary_roundoff_amt}}</td>
+                <td class="table-cell"style="width: 10%;font-size:12px;" id="summary_total_inv_amt">{{summary_total_inv_amt}}</td>
             </tbody>
             
             </table> 
@@ -616,15 +616,15 @@
         
         <table class="bottom-details" style="width: 100%;padding-top: 0px;text-align: center;margin-top: 30px; margin-bottom: 0px; padding-top: 0px;">
             <tr style="width: 100%;display: flex;justify-content: space-between;align-items: center;">
-                <td id="generated_by" style="width: 33%; text-align: left; padding-left: 6px;"><span class="boldText">Generated By:</span><span id="generated_by_gstin" style="font-size: 14px;"> {{generated_by}} </span><br/> 
-                    <span class="boldText">Print Date:</span><span id="generated_by_gstin" style="font-size: 14px;"> {{print_date}} </span></span></td>
+                <td  style="width: 33%; text-align: left; padding-left: 6px;"><span class="boldText">Generated By:</span><span style="font-size: 14px;" id="generated_by"> {{generated_by}} </span><br/> 
+                    <span class="boldText">Print Date:</span><span  style="font-size: 14px;" id="print_date"> {{print_date}} </span></span></td>
                 
-                <td id="bar_code" style="width: 37%;display: flex;flex-direction: column;align-items: center;margin-right: 30px;">
+                <td  style="width: 37%;display: flex;flex-direction: column;align-items: center;margin-right: 30px;">
                     <img src={{bottom_barcode}} width="166px" height="36" style="object-fit: cover;"/>
-                    <small style="margin-top: 1px;font-size: 8px;">{{ack_no}}</small>
+                    <small style="margin-top: 1px;font-size: 8px;" id="ack_no">{{ack_no}}</small>
                 </td>
-                <td id="signed_dt" style="width:30%;display: flex;flex-direction: column;justify-content: flex-end;align-items: center;padding-right: 6px;padding-bottom: 4px;align-items: flex-end;"><img style="width: 88px; object-fit: contain; padding-right: 20px; padding-top: 4px;"
-                    src="data:image/jpg;base64,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" /><span><span>Digitally Singed By NIC-IRP</span> <br/> <span id="bottom_gen_date">on: {{digital_sign_on}}</span> </span></td>
+                <td style="width:30%;display: flex;flex-direction: column;justify-content: flex-end;align-items: center;padding-right: 6px;padding-bottom: 4px;align-items: flex-end;"><img style="width: 88px; object-fit: contain; padding-right: 20px; padding-top: 4px;"
+                    src="data:image/jpg;base64,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" /><span><span>Digitally Singed By NIC-IRP</span> <br/> <span id="digital_sign_on">on: {{digital_sign_on}}</span> </span></td>
             </tr>
         </table>
 </body>
