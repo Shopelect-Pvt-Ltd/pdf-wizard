@@ -1,7 +1,7 @@
 const { MongoClient } = require("mongodb");
 
 const uri =
-  "mongodb://airlinedb_user:8649OV57IGR3Y1JS@ec2-43-205-133-199.ap-south-1.compute.amazonaws.com/admin?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.2.3"; // MongoDB connection URI
+  "mongodb://airlinedb_user:8649OV57IGR3Y1JS@ec2-43-204-135-11.ap-south-1.compute.amazonaws.com/admin?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.2.3"; // MongoDB connection URI
 const dbName = "gstservice";
 
 // Create a MongoDB client
